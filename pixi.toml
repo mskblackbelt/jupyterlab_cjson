@@ -1,0 +1,30 @@
+[workspace]
+authors = ["Dustin Wheeler <3818510+mskblackbelt@users.noreply.github.com>"]
+channels = ["conda-forge", "nodefaults"]
+name = "pchem2"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+pip = "*"
+python = "3.10.*"
+pytest = "*"
+hypothesis = "*"
+jupyterlab = "*"
+tqdm = "*"
+pandas = "*"
+xarray = "*"
+openpyxl = "*"
+tabulate = "*"
+seaborn = "*"
+cclib = "*"
+psi4 = "*"
+py3dmol = "*"
+nglview = "*"
+
+[pypi-dependencies]
+avogadro = "*"
+openchemistry = "*"
+nmrglue = "*"
