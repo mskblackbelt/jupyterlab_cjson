@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import { withStyles, Fab } from '@material-ui/core';
-import Close from '@material-ui/icons/Close';
+import { Fab } from '@mui/material';
+import withStyles from '@mui/styles/withStyles';
+import Close from '@mui/icons-material/Close';
 
 import { CalculationState } from '../../utils/constants';
 

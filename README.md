@@ -4,7 +4,7 @@ A JupyterLab extension for rendering CJSON
 
 ## Prerequisites
 
-* `jupyterlab@^0.27.0`
+* `jupyterlab@^4`
 
 ## Development
 

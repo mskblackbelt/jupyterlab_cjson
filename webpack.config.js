@@ -3,7 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.tsx',
-  devtool: 'none',
+  devtool: 'source-map',
   module: {
     rules: [
       {

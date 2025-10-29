@@ -5,9 +5,27 @@ import { wc } from '../common/webcomponent';
 
 import store from '../common'
 
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/material/styles";
+import { blue } from "@mui/material/colors";
+import { ThemeProvider, StyledEngineProvider, createTheme } from "@mui/material/styles";
 
-const theme = createMuiTheme();
+// declare module '@mui/styles/defaultTheme' {
+  // // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  // interface DefaultTheme extends Theme {}
+// }
+
+
+const theme = createTheme();
+
+export default makeStyles(
+  (theme) => ({
+    avatarExpense: {
+      color: theme.palette.getContrastText(blue[500]),
+      backgroundColor: blue[500],
+    },
+  }),
+  { defaultTheme: theme }
+);
 
 export interface IProps {
   data: IChemJson;
@@ -56,14 +74,16 @@ export class CJSONComponent extends React.Component<IProps, IState> {
     });
 
     return (
-     <div>
-        <MuiThemeProvider theme={theme}>
-          <Provider store={store}>
-            <div style={{width: '100%', height: '40rem'}}>
-              {molecule}
-            </div>
-          </Provider>
-        </MuiThemeProvider>
+      <div>
+        <StyledEngineProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <Provider store={store}>
+              <div style={{width: '100%', height: '40rem'}}>
+                {molecule}
+              </div>
+            </Provider>
+          </ThemeProvider>
+        </StyledEngineProvider>
       </div>
     );
   }

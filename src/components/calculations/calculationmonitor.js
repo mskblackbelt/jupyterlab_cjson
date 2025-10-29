@@ -1,32 +1,29 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import Avatar from '@material-ui/core/Avatar';
-import Chip from '@material-ui/core/Chip';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Typography from '@material-ui/core/Typography';
+import Avatar from '@mui/material/Avatar';
+import Chip from '@mui/material/Chip';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Typography from '@mui/material/Typography';
 
-import AccessTime from '@material-ui/icons/AccessTime';
-import AutoRenew from '@material-ui/icons/Autorenew';
-import Backup from '@material-ui/icons/Backup';
-import Done from '@material-ui/icons/Done';
-import Help from '@material-ui/icons/Help';
-import Launch from '@material-ui/icons/Launch';
-import ReportProblem from '@material-ui/icons/ReportProblem';
-import Notes from '@material-ui/icons/Notes';
+import AccessTime from '@mui/icons-material/AccessTime';
+import AutoRenew from '@mui/icons-material/Autorenew';
+import Backup from '@mui/icons-material/Backup';
+import Done from '@mui/icons-material/Done';
+import Help from '@mui/icons-material/Help';
+import Launch from '@mui/icons-material/Launch';
+import ReportProblem from '@mui/icons-material/ReportProblem';
+import Notes from '@mui/icons-material/Notes';
 
-import blue from '@material-ui/core/colors/blue';
-import grey from '@material-ui/core/colors/grey';
-import indigo from '@material-ui/core/colors/indigo';
-import lightGreen from '@material-ui/core/colors/lightGreen';
-import red from '@material-ui/core/colors/red';
+import {blue, grey, indigo, lightGreen, red} from '@mui/material/colors';
+
 
 import { CalculationState } from '../../utils/constants';
-import { IconButton } from '@material-ui/core';
+import { IconButton } from '@mui/material';
 
 const blue200 = blue['200'];
 const blue500 = blue['500'];
@@ -112,12 +109,12 @@ class CalculationMonitorTable extends React.Component {
                     />
                   </TableCell>
                   <TableCell>
-                    <IconButton onClick={() => {onSelect(calculation.name)}}>
+                    <IconButton onClick={() => {onSelect(calculation.name)}} size="large">
                       <Notes/>
                     </IconButton>
                   </TableCell>
                 </TableRow>
-              )
+              );
             })}
           </TableBody>
         </Table>

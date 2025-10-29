@@ -18,7 +18,7 @@ import {
   watchNewToken as watchNewTokenForNotifications
 } from '@openchemistry/sagas';
 
-import { auth } from '@openchemistry/girder-redux';
+// import { auth } from '@openchemistry/girder-redux';
 
 
 
@@ -39,12 +39,12 @@ export default function* root() {
   yield fork(watchLoadCalculations)
   yield fork(watchNewTokenForNotifications)
 
-  yield fork(auth.sagas.watchAuthenticate);
-  yield fork(auth.sagas.watchFetchMe);
-  yield fork(auth.sagas.watchFetchOauthProviders);
-  yield fork(auth.sagas.watchTestOauthEnabled);
-  yield fork(auth.sagas.watchInvalidateToken);
-  yield fork(auth.sagas.watchNewToken);
-  yield fork(auth.sagas.watchUsernameLogin);
-  yield fork(auth.sagas.watchNerscLogin);
+  // yield fork(auth.sagas.watchAuthenticate);
+  // yield fork(auth.sagas.watchFetchMe);
+  // yield fork(auth.sagas.watchFetchOauthProviders);
+  // yield fork(auth.sagas.watchTestOauthEnabled);
+  // yield fork(auth.sagas.watchInvalidateToken);
+  // yield fork(auth.sagas.watchNewToken);
+  // yield fork(auth.sagas.watchUsernameLogin);
+  // yield fork(auth.sagas.watchNerscLogin);
 }
